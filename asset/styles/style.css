@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Libre Bodoni", "Quicksand", serif;
+  height: 100vfh;
+  display: flex;
+  flex-direction: column;
+}
+
+header.navbar-container {
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header.navbar-container .page-tittle {
+  display: flex;
+  justify-content: center;
+  background-color: #986b4a;
+  height: auto;
+}
+
+header.navbar-container .page-tittle a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+header.navbar-container .nav-list {
+  display: flex;
+  justify-content: center;
+  background-color: #170e11;
+}
+
+header.navbar-container .nav-list ul {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  gap: 2rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style: none;
+}
+
+header.navbar-container .nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  font-family: "Quicksand", serif;
+}
+
+main .headline-container .headline-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+main .headline-container .headline-content img {
+  width: 100%;
+  max-height: 300px;
+  opacity: 0.5;
+}
+
+main .headline-container .headline-content .headline-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main .headline-container .headline-content .headline-text a {
+  color: white;
+  text-decoration: none;
+}
+
+main .content {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem 0;
+}
+
+main .content .card {
+  border: 1px solid black;
+  margin: 10px 20px;
+  margin-left: 0;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main .content .card a img {
+  width: 100%;
+  max-height: 200px;
+}
+
+main .content .card .card-text {
+  padding: 20px;
+}
+
+main .content .card .card-text h2 a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
