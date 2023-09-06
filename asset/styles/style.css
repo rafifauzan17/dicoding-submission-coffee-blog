@@ -12,46 +12,41 @@ body {
   flex-direction: column;
 }
 
-header.navbar-container {
+header {
   width: 100%;
-  margin-inline: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
-header.navbar-container .page-tittle {
+header .page-tittle {
   display: flex;
   justify-content: center;
   background-color: #986b4a;
   height: auto;
 }
 
-header.navbar-container .page-tittle a {
+header .page-tittle a {
   color: white;
   font-weight: 700;
   text-decoration: none;
   font-size: 2rem;
 }
 
-header.navbar-container .nav-list {
+header nav {
   display: flex;
   justify-content: center;
   background-color: #170e11;
 }
 
-header.navbar-container .nav-list ul {
+header nav ul {
   display: flex;
-  justify-content: center;
   padding-left: 0;
   gap: 2rem;
 }
 
-header.navbar-container .nav-list li {
+header nav li {
   list-style: none;
 }
 
-header.navbar-container .nav-list li a {
+header nav li a {
   color: white;
   text-decoration: none;
   font-weight: 700;
@@ -59,35 +54,37 @@ header.navbar-container .nav-list li a {
 
 main {
   display: flex;
-  
   flex-flow: row wrap;
   padding: 1rem 2rem;
   font-family: "Quicksand", serif;
 }
 
-main .headline-container{
+main .headline-container {
   width: 100%;
+  position: relative;
+  display: inline-block;
 }
 
 main .headline-container .headline-content img {
   width: 100%;
   max-height: 300px;
   opacity: 0.5;
+  display: block;
 }
 
 main .headline-container .headline-content .headline-text {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.4rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
 }
 
-main .headline-container .headline-content .headline-text a {
-  color: white;
+main .headline-container .headline-content .headline-text h2 a {
+  color: #170e11;
+  text-shadow: 3px 3px 2px rgba(255, 255, 255, 1);
   text-decoration: none;
 }
 
@@ -106,6 +103,7 @@ main .content .card {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 0;
 }
 
 main .content .card a img {
@@ -113,8 +111,8 @@ main .content .card a img {
   max-height: 150px;
 }
 
-main .content .card .card-text {
-  padding: 20px;
+.card-text {
+  padding: 5px 20px;
 }
 
 main .content .card .card-text h2 a {
@@ -127,7 +125,11 @@ main aside {
   display: flex;
   flex-direction: column;
   width: 20%;
-  margin: 1rem 0;
+}
+
+main aside h2 {
+  font-size: 1.2rem;
+  padding: 20px 0;
 }
 
 main aside .sidebar-card {
@@ -145,10 +147,41 @@ main aside .sidebar-card a img {
   max-height: 200px;
 }
 
+main aside .sidebar-card .card-text a{
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
 footer {
   text-align: center;
   font-weight: bold;
   padding: 20px;
   color: white;
   background-color: #986b4a;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main .content {
+    width: 100%;
+    justify-content: center;
+    flex-flow: column;
+  }
+
+  main .headline-container .headline-content .headline-text {
+    font-size: 1rem;
+  }
+
+  main .content .card {
+    width: 100%;
+  }
+
+  main aside {
+    width: 100%;
+  }
 }
